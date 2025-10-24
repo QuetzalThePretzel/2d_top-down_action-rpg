@@ -1,0 +1,155 @@
+[gd_scene load_steps=21 format=3 uid="uid://de0g1qtq5m4sc"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_2vw7p"]
+[ext_resource type="Texture2D" uid="uid://bt483hq4wrjh3" path="res://Ninja Adventure - Asset Pack/Actor/Characters/RobotCamouflage/SeparateAnim/Walk.png" id="2_lsqpl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ijhru"]
+radius = 35.0
+height = 88.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htjtn"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfxdd"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7racl"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q4e1"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2ff1"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66182"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk8el"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wyf8"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cp33"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41ane"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2jy3"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u66x2"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05u3a"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8lo"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vu2r"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx0l7"]
+atlas = ExtResource("2_lsqpl")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gs1a6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htjtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfxdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7racl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q4e1")
+}],
+"loop": true,
+"name": &"move_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2ff1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66182")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk8el")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wyf8")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cp33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41ane")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2jy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u66x2")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05u3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vu2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx0l7")
+}],
+"loop": true,
+"name": &"move_up",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_2vw7p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_ijhru")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_gs1a6")
+animation = &"move_up"
