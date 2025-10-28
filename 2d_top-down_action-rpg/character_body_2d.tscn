@@ -144,12 +144,12 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2vw7p")
+move_speed = 115.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_ijhru")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_gs1a6")
 animation = &"move_up"
