@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=4 uid="uid://cyl16rrg6wjmu"]
 
-[ext_resource type="Texture2D" uid="uid://4ifcu686pfs2" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="1_r3yio"]
-[ext_resource type="Texture2D" uid="uid://brb6umhtvap5o" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="2_w15t0"]
-[ext_resource type="Texture2D" uid="uid://c7mvps68cmkrt" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png" id="3_jffib"]
+[ext_resource type="Texture2D" uid="uid://4ifcu686pfs2" path="res://Assets/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="1_r3yio"]
+[ext_resource type="Texture2D" uid="uid://brb6umhtvap5o" path="res://Assets/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="2_w15t0"]
+[ext_resource type="Texture2D" uid="uid://c7mvps68cmkrt" path="res://Assets/Backgrounds/Tilesets/TilesetVillageAbandoned.png" id="3_jffib"]
 [ext_resource type="PackedScene" uid="uid://sysyvy3pyhud" path="res://portal.tscn" id="4_330qi"]
 [ext_resource type="PackedScene" uid="uid://de0g1qtq5m4sc" path="res://character_body_2d.tscn" id="5_osw8j"]
 

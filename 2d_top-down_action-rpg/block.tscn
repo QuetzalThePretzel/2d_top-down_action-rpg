@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://da5fmifhna1d2"]
+
+[ext_resource type="Texture2D" uid="uid://dw7u1yy4yi4gd" path="res://Assets/Backgrounds/Tilesets/TilesetDungeon.png" id="1_u0ypw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d72j7"]
+bounce = 0.2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdxrp"]
+size = Vector2(14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3j6x"]
+atlas = ExtResource("1_u0ypw")
+region = Rect2(128, 48, 16, 16)
+
+[node name="Block" type="RigidBody2D" groups=["Movable"]]
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_d72j7")
+gravity_scale = 0.0
+lock_rotation = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vdxrp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_t3j6x")

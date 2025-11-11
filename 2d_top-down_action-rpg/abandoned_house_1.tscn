@@ -1,16 +1,16 @@
 [gd_scene load_steps=18 format=4 uid="uid://bdk6ndwjmkdde"]
 
-[ext_resource type="Texture2D" uid="uid://byfe54qbi6n3p" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="1_mmlbr"]
-[ext_resource type="Texture2D" uid="uid://4ifcu686pfs2" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="2_jo75y"]
-[ext_resource type="Texture2D" uid="uid://brb6umhtvap5o" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="3_tgj1e"]
-[ext_resource type="Texture2D" uid="uid://mfmtysqn00hb" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png" id="4_deuhq"]
-[ext_resource type="Texture2D" uid="uid://buxxg2e76chss" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="5_2wu15"]
-[ext_resource type="Texture2D" uid="uid://c7mvps68cmkrt" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png" id="6_1flv8"]
-[ext_resource type="PackedScene" uid="uid://sysyvy3pyhud" path="res://portal.tscn" id="6_72wx8"]
-[ext_resource type="PackedScene" uid="uid://de0g1qtq5m4sc" path="res://character_body_2d.tscn" id="7_oa1ww"]
+[ext_resource type="Texture2D" uid="uid://byfe54qbi6n3p" path="res://Assets/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="1_wv3r6"]
+[ext_resource type="Texture2D" uid="uid://4ifcu686pfs2" path="res://Assets/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="2_rqum4"]
+[ext_resource type="Texture2D" uid="uid://brb6umhtvap5o" path="res://Assets/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="3_n0vyc"]
+[ext_resource type="Texture2D" uid="uid://mfmtysqn00hb" path="res://Assets/Backgrounds/Tilesets/TilesetElement.png" id="4_3xg7e"]
+[ext_resource type="Texture2D" uid="uid://buxxg2e76chss" path="res://Assets/Backgrounds/Tilesets/Interior/Elements.png" id="5_j16w5"]
+[ext_resource type="Texture2D" uid="uid://c7mvps68cmkrt" path="res://Assets/Backgrounds/Tilesets/TilesetVillageAbandoned.png" id="6_ag35x"]
+[ext_resource type="PackedScene" uid="uid://sysyvy3pyhud" path="res://portal.tscn" id="7_utc30"]
+[ext_resource type="PackedScene" uid="uid://de0g1qtq5m4sc" path="res://character_body_2d.tscn" id="8_b7dgr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inm6f"]
-texture = ExtResource("1_mmlbr")
+texture = ExtResource("1_wv3r6")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -275,7 +275,7 @@ texture = ExtResource("1_mmlbr")
 15:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qv6m1"]
-texture = ExtResource("2_jo75y")
+texture = ExtResource("2_rqum4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -572,7 +572,7 @@ texture = ExtResource("2_jo75y")
 19:16/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8qni"]
-texture = ExtResource("3_tgj1e")
+texture = ExtResource("3_n0vyc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -693,7 +693,7 @@ texture = ExtResource("3_tgj1e")
 9:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_853wb"]
-texture = ExtResource("4_deuhq")
+texture = ExtResource("4_3xg7e")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -842,7 +842,7 @@ texture = ExtResource("4_deuhq")
 9:13/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1v23t"]
-texture = ExtResource("5_2wu15")
+texture = ExtResource("5_j16w5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -873,7 +873,7 @@ sources/3 = SubResource("TileSetAtlasSource_853wb")
 sources/4 = SubResource("TileSetAtlasSource_1v23t")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttltv"]
-texture = ExtResource("4_deuhq")
+texture = ExtResource("4_3xg7e")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1027,7 +1027,7 @@ texture = ExtResource("4_deuhq")
 9:13/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_subpm"]
-texture = ExtResource("6_1flv8")
+texture = ExtResource("6_ag35x")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1293,12 +1293,12 @@ tile_set = SubResource("TileSet_yoh8v")
 tile_map_data = PackedByteArray("AAAEAPz/AQAQAAoAAAAEAP3/AQAQAAsAAAAFAPz/AQARAAoAAAAFAP3/AQARAAsAAAAGAPz/AQASAAoAAAAGAP3/AQASAAsAAAAAAPz/AQATAAoAAAAAAP3/AQATAAsAAAABAP3/AQALAAsAAAADAPz/AQAFAAMAAAADAP3/AQAFAAQAAAD///z/AQATAAoAABD///3/AQATAAsAABADAAAAAQANAAsAAAACAAAAAQAPAAsAAAAEAAAAAQAPAAsAABACAP3/AQAMAAsAAAD9//z/AAAEAAMAAAD9//3/AAAEAAQAAAD+//z/AAAFAAMAAAD+//3/AAAFAAQAAAAFAAIAAQAMAAsAAAAGAAEAAQAMAAsAAAAGAAIAAQAOAAsAAAD9/wIAAQAMAAsAAAD+/wIAAQAMAAsAAAD9/wEAAQAOAAsAAAA=")
 tile_set = SubResource("TileSet_x7fww")
 
-[node name="Portal" parent="." instance=ExtResource("6_72wx8")]
+[node name="Portal" parent="." instance=ExtResource("7_utc30")]
 position = Vector2(-1, 64)
 next_scene = "res://main.tscn"
 player_location = Vector2(328, 208)
 
-[node name="Player" parent="." instance=ExtResource("7_oa1ww")]
+[node name="Player" parent="." instance=ExtResource("8_b7dgr")]
 position = Vector2(-1, 29)
 
 [node name="Camera2D" type="Camera2D" parent="."]
