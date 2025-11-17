@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var move_speed: float = 150.0
-@export var push_strength: float = 50
+@export var push_strength: float = 100
 
 func _ready() -> void:
 	position = Scenemanager.player_spawn_position

@@ -1,5 +1,6 @@
 extends Area2D
-
+signal pressed
+signal unpressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +15,13 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	print("it's on me")
 	$AnimatedSprite2D.play("on")
+	pressed.emit()
 
 func _on_body_exited(body: Node2D) -> void:
 	print("it got off me")
 	$AnimatedSprite2D.play("off")
+	unpressed.emit()
+
+
+func _on_unpressed() -> void:
+	pass # Replace with function body.

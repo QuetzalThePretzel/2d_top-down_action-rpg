@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ob5veo8fpi1"]
+
+[ext_resource type="Texture2D" uid="uid://brb6umhtvap5o" path="res://Assets/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="1_1d87j"]
+[ext_resource type="Script" path="res://door.gd" id="1_y725s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdtjm"]
+size = Vector2(10, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksfcj"]
+atlas = ExtResource("1_1d87j")
+region = Rect2(163, 144, 10, 16)
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_y725s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_bdtjm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ksfcj")
