@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bt483hq4wrjh3" path="res://Assets/Actor/Characters/RobotCamouflage/SeparateAnim/Walk.png" id="2_lsqpl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5xlr"]
-size = Vector2(60, 60)
+size = Vector2(60, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htjtn"]
 atlas = ExtResource("2_lsqpl")
@@ -146,7 +146,7 @@ script = ExtResource("1_2vw7p")
 move_speed = 115.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-2.98023e-08, 0)
 scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_y5xlr")
 

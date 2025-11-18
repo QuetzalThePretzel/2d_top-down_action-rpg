@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://1dblidpghpdc"]
+
+[ext_resource type="Script" path="res://water_button_2.gd" id="1_ajs2e"]
+[ext_resource type="Texture2D" uid="uid://dw7u1yy4yi4gd" path="res://Assets/Backgrounds/Tilesets/TilesetDungeon.png" id="2_kfb04"]
+[ext_resource type="PackedScene" uid="uid://criksgwso67is" path="res://water_obstacle_lvl_2.tscn" id="3_eeaop"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdk7l"]
+size = Vector2(16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iucd"]
+atlas = ExtResource("2_kfb04")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j654u"]
+atlas = ExtResource("2_kfb04")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ggwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iucd")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j654u")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="WaterButton2" type="Area2D"]
+script = ExtResource("1_ajs2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2320, 48)
+shape = SubResource("RectangleShape2D_tdk7l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2320, 47)
+sprite_frames = SubResource("SpriteFrames_5ggwv")
+animation = &"off"
+
+[node name="WaterObstacleLvl2" parent="." instance=ExtResource("3_eeaop")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
