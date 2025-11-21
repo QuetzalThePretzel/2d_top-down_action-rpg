@@ -1,6 +1,5 @@
 extends Area2D
 signal pressed
-signal unpressed
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,11 +8,11 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_float) -> void:
 	pass
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_Node2D) -> void:
 	print("I'm on")
 	$AnimatedSprite2D.play("on")
 	pressed.emit()
@@ -21,3 +20,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_pressed() -> void:
 	$WaterObstacleLvl1.queue_free()
+	$CollisionShape2D.queue_free()

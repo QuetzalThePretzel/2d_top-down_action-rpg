@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg0vkxkvc5jd8"
-path="res://.godot/imported/SpriteSheet16x16.png-1c432bbd0aaae973b9dbfac7156d72e5.ctex"
+uid="uid://dlu2p0md8npm4"
+path="res://.godot/imported/BlueFlower16x16.png-8207affa80a24e11c950098493fc0d3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/Animated/Plant/SpriteSheet16x16.png"
-dest_files=["res://.godot/imported/SpriteSheet16x16.png-1c432bbd0aaae973b9dbfac7156d72e5.ctex"]
+source_file="res://Assets/Backgrounds/Animated/Plant/BlueFlower16x16.png"
+dest_files=["res://.godot/imported/BlueFlower16x16.png-8207affa80a24e11c950098493fc0d3b.ctex"]
 
 [params]
 

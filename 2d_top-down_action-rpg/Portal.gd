@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
@@ -17,7 +17,4 @@ func _on_body_entered(body: Node2D) -> void:
 		Scenemanager.player_spawn_position = player_location
 		get_tree().change_scene_to_file.call_deferred(next_scene)
 		print("entered the portal")
-func _on_body_exited(body: Node2D) -> void:
-	print("exited the portal")
-	pass
 # Called when the node enters the scene tree for the first time.
