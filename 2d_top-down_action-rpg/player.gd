@@ -6,6 +6,7 @@ class_name Player
 
 func _ready() -> void:
 	position = Scenemanager.player_spawn_position
+	Scenemanager.player_hp = 3
 func _physics_process(_float) -> void:
 	
 	var move_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -29,12 +30,13 @@ func _physics_process(_float) -> void:
 			
 			collider_node.apply_central_force(-collision_normal * push_strength)
 	move_and_slide()
-#Add code to player. 
-#The characterbody doesnt have collision signals
-#(although you could add a rigidbody as a child) 
-#so collision detection needs to be added 
-# - find collision node with get_last_slide_collision() 
-#and get_collider(), if there is a collision with a pushable object, 
-#get direction of collision (normal vector), 
-#apply central force away from player (negative), 
-#deactivate or lock rotation, apply linear damping
+
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	Scenemanager.player_hp -= 1 # Replace with function body.
+	print(Scenemanager.player_hp)
+	if Scenemanager.player_hp <= 0:
+		die()
+func die():
+	get_tree().call_deferred("reload_current_scene")
