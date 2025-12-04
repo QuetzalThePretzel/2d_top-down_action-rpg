@@ -87,7 +87,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"move_down",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -104,7 +104,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"move_left",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -121,7 +121,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"move_right",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -138,30 +138,37 @@ animations = [{
 }],
 "loop": true,
 "name": &"move_up",
-"speed": 5.0
+"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sm7l8"]
-radius = 8.0
+radius = 16.0
 
 [node name="Player" type="CharacterBody2D" groups=["Movable"]]
+collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_2vw7p")
 move_speed = 115.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.98023e-08, 0)
+position = Vector2(-1.77636e-15, 0)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_y5xlr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gs1a6")
-animation = &"move_up"
+animation = &"move_down"
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_sm7l8")
 debug_color = Color(0.819917, 0.280312, 0.729214, 0.42)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 24)
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

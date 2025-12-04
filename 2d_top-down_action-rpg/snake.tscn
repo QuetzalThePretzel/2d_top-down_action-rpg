@@ -1,10 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://cvdpphe5j0as7"]
+[gd_scene load_steps=23 format=3 uid="uid://cvdpphe5j0as7"]
 
 [ext_resource type="Script" path="res://snake.gd" id="1_ueldr"]
 [ext_resource type="Texture2D" uid="uid://jhq7m2dqqbup" path="res://Assets/Actor/Monsters/Snake3/Snake3.png" id="2_dgrsw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e5tfn"]
 radius = 90.0056
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xduh2"]
+radius = 9.05752
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mouv"]
 radius = 7.2111
@@ -145,13 +148,25 @@ animations = [{
 }]
 
 [node name="Snake" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 8
 motion_mode = 1
 script = ExtResource("1_ueldr")
 
 [node name="ChasingRadius" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChasingRadius"]
 shape = SubResource("CircleShape2D_e5tfn")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_xduh2")
+debug_color = Color(0.888583, 0.128011, 0.735318, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5mouv")

@@ -1,0 +1,126 @@
+[gd_scene load_steps=19 format=3 uid="uid://bq8cog3fs7xsi"]
+
+[ext_resource type="Texture2D" uid="uid://bi2mdovw3uj24" path="res://Assets/FX/Elemental/Rock/SpriteSheet.png" id="1_bs8fd"]
+[ext_resource type="Script" path="res://rock_attack.gd" id="1_iyv3s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btaeu"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af8kf"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6fgi"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ml24"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a0s5"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(120, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhnet"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(150, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1eno"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(180, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6cbj"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(210, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgbga"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(240, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cykau"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(270, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27h6b"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(300, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwnud"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(330, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xnml"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(360, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23d3b"]
+atlas = ExtResource("1_bs8fd")
+region = Rect2(390, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d27qm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btaeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af8kf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6fgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ml24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a0s5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhnet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1eno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6cbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgbga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cykau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27h6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwnud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xnml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23d3b")
+}],
+"loop": true,
+"name": &"rock",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0u4fq"]
+radius = 8.18621
+
+[node name="RockAttack" type="Area2D"]
+z_index = 2
+script = ExtResource("1_iyv3s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d27qm")
+animation = &"rock"
+autoplay = "rock"
+frame_progress = 0.698191
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0u4fq")
