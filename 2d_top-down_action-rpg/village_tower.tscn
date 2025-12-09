@@ -2314,8 +2314,10 @@ tile_map_data = PackedByteArray("AACOAB8AAAANAA4AAACTAB8AAAAOAA4AAACQAB8AAAAQAA0
 tile_set = SubResource("TileSet_ysc33")
 
 [node name="WaterButton3" parent="Layers" instance=ExtResource("14_c5478")]
+collision_mask = 4
 
 [node name="WaterButton1" parent="Layers" instance=ExtResource("4_wctcs")]
+collision_mask = 4
 
 [node name="FurnitureLayer" type="TileMapLayer" parent="Layers"]
 tile_map_data = PackedByteArray("AAAPAAkAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAMAAcAAAAEAAMAAAAMAAgAAAAEAAQAAAANAAcAAAAFAAMAAAANAAgAAAAFAAQAAAAQAAUAAAAGAAsAAAAMAAUAAAAGAAwAABAvABIAAAAGAAwAABAMABMAAAAGAAsAABBfABUAAQAAAAAAAABgABUAAQABAAAAAABfABYAAQAAAAEAAABgABYAAQACAAIAAACdAAYAAAAGAAwAAABzAAYAAAAGAAsAABA/AAwAAAAGAAsAAABaABUAAAAGAAwAABAPABIAAAAKAAcAAAAPABMAAAAKAAgAAAAQABIAAAALAAcAAAAQABMAAAALAAgAAAAPABcAAAAEAAQAAAAQABcAAAAFAAQAAAANABYAAAAEAAMAAAANABcAAAAEAAQAAAAOABYAAAAFAAMAAAAOABcAAAAFAAQAAAAPABYAAAAEAAMAAAAQABYAAAAFAAMAAABZAAYAAQAAAAAAAABZAAcAAQAAAAEAAABaAAYAAQABAAAAAABaAAcAAQABAAEAAABcAAYAAQAAAAAAABBbAAYAAQABAAAAABBcAAcAAQAAAAEAABBbAAcAAQABAAEAABBbAAgAAQABAAEAAABbAAkAAQABAAIAAABcAAgAAQACAAEAAABcAAkAAQACAAIAAABaAAgAAQABAAEAABBZAAgAAQACAAEAABBaAAkAAQABAAIAABBZAAkAAQACAAIAABCdABYAAwAHAA0AAAA=")
@@ -2329,54 +2331,63 @@ position = Vector2(1000, 248)
 [node name="FromFirstToSecond" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(200, 88)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(224, 316)
 
 [node name="FromSecondToFirst" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(200, 312)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(232, 104)
 
 [node name="ToOutside" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(232, 168)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://main.tscn"
 player_location = Vector2(-568, -80)
 
 [node name="ToDF1FromFirstFloor" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(264, 91)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(808, 304)
 
 [node name="FromDF1toFirstFloor" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(760, 296)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(232, 104)
 
 [node name="FromDF2ToDF1" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(1448, 344)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(995, 219)
 
 [node name="FromDF3ToDF3" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(1848, 106)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(2491, 105)
 
 [node name="FromDF3ToDF2" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(2520, 104)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(1818, 105)
 
 [node name="FromDF1ToDF2" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(1016, 200)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(1457, 312)
 
@@ -2384,6 +2395,7 @@ player_location = Vector2(1457, 312)
 position = Vector2(1457, 128)
 scale = Vector2(4, 4)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(2168, 136)
 
@@ -2391,12 +2403,14 @@ player_location = Vector2(2168, 136)
 position = Vector2(1537, 353)
 scale = Vector2(2, 2)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(2120, 360)
 
 [node name="Hole3" parent="Portals" instance=ExtResource("4_1eke0")]
 position = Vector2(2520, 361)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://water_miniboss_arena.tscn"
 player_location = Vector2(267, 218)
 

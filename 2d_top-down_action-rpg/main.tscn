@@ -5503,42 +5503,48 @@ zoom = Vector2(4, 4)
 
 [node name="AbandonedHouse1Portal" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(328, 183)
-collision_layer = 2
+collision_mask = 4
 next_scene = "res://abandoned_house_1.tscn"
 player_location = Vector2(-1, 30)
 
 [node name="AbandonedHouse2Portal" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(232, 296)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://abandoned_house_2.tscn"
 player_location = Vector2(0, 30)
 
 [node name="AbandonedHouse3Portal" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(488, -8)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://abandoned_house_3.tscn"
 player_location = Vector2(431, 232)
 
 [node name="AbandonedHouse4Portal" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(392, 424)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://abandoned_house_4.tscn"
 player_location = Vector2(431, 232)
 
 [node name="AbandonedHouse5Portal" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(296, 424)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://abandoned_house_5.tscn"
 player_location = Vector2(431, 262)
 
 [node name="AbandonedHouse6Portal" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(40, 312)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://abandoned_house_6.tscn"
 player_location = Vector2(431, 294)
 
 [node name="VillageTower" parent="Portals" instance=ExtResource("8_ib7yg")]
 position = Vector2(-568, -104)
 collision_layer = 2
+collision_mask = 4
 next_scene = "res://village_tower.tscn"
 player_location = Vector2(232, 144)
